@@ -63,19 +63,20 @@ struct HomeScreen: View {
 // Allows the usage of hex codes, this subroutine is not mine.
 extension Color {
     init(hex: String) {
-        let hex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
-        let scanner = Scanner(string: hex)
+        let hex = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
-        // Scan the color value
-        var color: UInt32 = 0
+        var rgb: UInt64 = 0
         if hex.hasPrefix("#") {
-            scanner.currentIndex = hex.index(hex.startIndex, offsetBy: 1) // Skip the #
+            let start = hex.index(hex.startIndex, offsetBy: 1)
+            let hexColor = String(hex[start...])
+            Scanner(string: hexColor).scanHexInt64(&rgb)
+        } else {
+            Scanner(string: hex).scanHexInt64(&rgb)
         }
-        scanner.scanHexInt32(&color)
         
-        let red = Double((color >> 16) & 0xFF) / 255.0
-        let green = Double((color >> 8) & 0xFF) / 255.0
-        let blue = Double(color & 0xFF) / 255.0
+        let red = Double((rgb >> 16) & 0xFF) / 255.0
+        let green = Double((rgb >> 8) & 0xFF) / 255.0
+        let blue = Double(rgb & 0xFF) / 255.0
         
         self.init(red: red, green: green, blue: blue)
     }

@@ -20,6 +20,8 @@
 		09DB46422C5956DF00F0E20B /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DB46412C5956DF00F0E20B /* CalendarScreen.swift */; };
 		A3BBE2CA2C5983C0000E9712 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBE2C92C5983C0000E9712 /* Journal.swift */; };
 		A3BBE2CC2C5983DD000E9712 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBE2CB2C5983DD000E9712 /* Tasks.swift */; };
+		A3E4BB202C5AEE2600FAD776 /* NewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4BB1F2C5AEE2600FAD776 /* NewToDoView.swift */; };
+		A3E4BB242C5AF04900FAD776 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4BB232C5AF04900FAD776 /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		09DB46412C5956DF00F0E20B /* CalendarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarScreen.swift; sourceTree = "<group>"; };
 		A3BBE2C92C5983C0000E9712 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		A3BBE2CB2C5983DD000E9712 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		A3E4BB1F2C5AEE2600FAD776 /* NewToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoView.swift; sourceTree = "<group>"; };
+		A3E4BB232C5AF04900FAD776 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +85,9 @@
 			children = (
 				0953B4E22C540D5A007C41E2 /* FinalProjectApp.swift */,
 				0953B4E42C540D5A007C41E2 /* ContentView.swift */,
-				09DB463F2C5956A400F0E20B /* HomeScreen.swift */,
-				A3BBE2C92C5983C0000E9712 /* Journal.swift */,
-				A3BBE2CB2C5983DD000E9712 /* Tasks.swift */,
-				09DB46412C5956DF00F0E20B /* CalendarScreen.swift */,
-				091361C42C5A93800073ACF6 /* CalendarView.swift */,
-				09DB463D2C59564D00F0E20B /* MentalHealthScreen.swift */,
-				091361C62C5AAEE00073ACF6 /* Calendar Resources */,
+				A3E4BB1C2C5AE8F700FAD776 /* Home Screen */,
+				A3E4BB1D2C5AE96000FAD776 /* Calendar */,
+				A3E4BB1E2C5AE98D00FAD776 /* Mental Health */,
 				0953B4E62C540D5F007C41E2 /* Assets.xcassets */,
 				0953B4E82C540D5F007C41E2 /* Preview Content */,
 			);
@@ -100,6 +100,52 @@
 				0953B4E92C540D5F007C41E2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A3E4BB1C2C5AE8F700FAD776 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				09DB463F2C5956A400F0E20B /* HomeScreen.swift */,
+				A3E4BB212C5AF00200FAD776 /* Tasks */,
+				A3E4BB222C5AF01E00FAD776 /* Journal */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		A3E4BB1D2C5AE96000FAD776 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				091361C62C5AAEE00073ACF6 /* Calendar Resources */,
+				091361C42C5A93800073ACF6 /* CalendarView.swift */,
+				09DB46412C5956DF00F0E20B /* CalendarScreen.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		A3E4BB1E2C5AE98D00FAD776 /* Mental Health */ = {
+			isa = PBXGroup;
+			children = (
+				09DB463D2C59564D00F0E20B /* MentalHealthScreen.swift */,
+			);
+			path = "Mental Health";
+			sourceTree = "<group>";
+		};
+		A3E4BB212C5AF00200FAD776 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				A3BBE2CB2C5983DD000E9712 /* Tasks.swift */,
+				A3E4BB1F2C5AEE2600FAD776 /* NewToDoView.swift */,
+				A3E4BB232C5AF04900FAD776 /* ToDoItem.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		A3E4BB222C5AF01E00FAD776 /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				A3BBE2C92C5983C0000E9712 /* Journal.swift */,
+			);
+			path = Journal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,11 +221,13 @@
 				A3BBE2CC2C5983DD000E9712 /* Tasks.swift in Sources */,
 				0953B4E52C540D5A007C41E2 /* ContentView.swift in Sources */,
 				091361C52C5A93800073ACF6 /* CalendarView.swift in Sources */,
+				A3E4BB202C5AEE2600FAD776 /* NewToDoView.swift in Sources */,
 				091361BF2C5A92710073ACF6 /* EventStore.swift in Sources */,
 				09DB46402C5956A400F0E20B /* HomeScreen.swift in Sources */,
 				091361C12C5A929C0073ACF6 /* Event.swift in Sources */,
 				09DB46422C5956DF00F0E20B /* CalendarScreen.swift in Sources */,
 				0953B4E32C540D5A007C41E2 /* FinalProjectApp.swift in Sources */,
+				A3E4BB242C5AF04900FAD776 /* ToDoItem.swift in Sources */,
 				091361C32C5A92D10073ACF6 /* Date.swift in Sources */,
 				09DB463E2C59564D00F0E20B /* MentalHealthScreen.swift in Sources */,
 				A3BBE2CA2C5983C0000E9712 /* Journal.swift in Sources */,
