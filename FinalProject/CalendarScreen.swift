@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct CalendarScreen: View {
+    @EnvironmentObject var eventStore: EventStore
+    
     var body: some View {
-        Text("This is the calendar screen!")
+        NavigationStack {
+            ScrollView {
+                CalendarView(range: DateInterval(start: .distantPast, end: .distantFuture),
+                             eventStore: eventStore)
+            }
+            
+                .navigationTitle("Calendar View")
+        }
     }
 }
 
-#Preview {
-    CalendarScreen()
+struct CalendarScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        CalendarScreen()
+            .environmentObject(EventStore(preview: true))
+    }
 }

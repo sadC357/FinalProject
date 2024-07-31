@@ -30,7 +30,9 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(EventStore(preview: true))
+    }
 }
-
