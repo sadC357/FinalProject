@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-@main
+
 struct FinalProjectApp: App {
     var body: some Scene {
         WindowGroup {
