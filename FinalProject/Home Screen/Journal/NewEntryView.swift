@@ -42,7 +42,7 @@ struct NewEntryView: View {
     }
     
     func addEntry() {
-        let entry = FinalProject.EntryItem(title: EntryItem.title)
+        let entry = MindSpaceProject.EntryItem(title: EntryItem.title)
         modelContext.insert(entry)
     }
 }

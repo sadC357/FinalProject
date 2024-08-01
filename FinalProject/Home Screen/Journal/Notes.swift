@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 struct Note: Identifiable {
-    var id: UUID,
-    var content: String,
-    var date: Date(),
+    var id: UUID
+    var content: String
+    var date: Date
     var image: UIImage
 }
