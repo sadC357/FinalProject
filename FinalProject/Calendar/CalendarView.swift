@@ -28,7 +28,7 @@ struct CalendarView: UIViewRepresentable {
         
     }
     
-    class Coordinator: NSObject, UICalendarViewDelegate{
+    class Coordinator: NSObject, UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate{
         var parent: CalendarView
         @ObservedObject var eventStore: EventStore
         init(parent: CalendarView, eventStore: ObservedObject<EventStore>) {
@@ -55,6 +55,14 @@ struct CalendarView: UIViewRepresentable {
                     icon.text = single.eventType.icon
                     return icon
             }
+        }
+        
+        func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
+            
+        }
+        
+        func dateSelection(_ selection: UICalendarSelectionSingleDate, canSelectDate dateComponents: DateComponents?) -> Bool {
+            return true
         }
     }
     
