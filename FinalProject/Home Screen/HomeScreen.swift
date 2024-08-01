@@ -27,7 +27,7 @@ struct HomeScreen: View {
                     
                     // Screen Information
                     Text("Welcome to MindSpace! Explore the features below to add tasks, set reminders, and keep a journal, all designed to help you stay organized and mindful.")
-                        .font(.body)
+                        .font(.custom("Klasik-Regular", size: 17))
                         .multilineTextAlignment(.center)
                     
                     // Buttons
